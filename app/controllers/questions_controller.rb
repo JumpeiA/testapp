@@ -2,7 +2,6 @@ class QuestionsController < ApplicationController
     # 質問一覧表示
     def index
         @questions = Question.all
-        p @questions
     end
     # 質問詳細ページ表示
     def show
@@ -18,7 +17,6 @@ class QuestionsController < ApplicationController
     # 質問の登録
     def create
         # p params
-        p question_params
         # Questionモデルを初期化
         @question = Question.new(question_params)
         # QuestionモデルをDBへ保存
